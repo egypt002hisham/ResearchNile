@@ -1,6 +1,18 @@
-from flask import Flask, render_template
+from flask import Flask, jsonify, redirect, render_template, request, session, url_for ,flash 
+from flask_sqlalchemy import SQLAlchemy
+from flask_session import Session
+from datetime import timedelta
+import os
+
 
 app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'a_random_secret_key')
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB
+app.config['SESSION_COOKIE_HTTPONLY'] = True  # Prevents JavaScript from accessing session cookies
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'  # Helps protect against CSRF attacks
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=365)
+
 
 @app.route('/')
 def index():
