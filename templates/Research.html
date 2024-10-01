@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/research.css') }}">
+
+</head>
+  <body>
+      <header>
+          <h1 style='color:black;'> ResearchNile</h1>
+          <nav>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="#">Research</a></li>
+                  <li><a href="/contact">Contact</a></li>
+              </ul>
+          </nav>
+      </header>
+
+      <section class="hero">
+          <div class="hero-content">
+              <h2>Welcome to Research Hub</h2>
+              <p>Explore the latest scientific and philosophical researches.</p>
+          </div>
+      </section>
+
+      <section class="latest-research">
+          <h2>Latest Research</h2>
+          <div class="research-list">
+              <!-- Placeholder for latest research articles -->
+              <div class="research-item">
+                  <h3>Article Title 1</h3>
+                  <p>Summary of the article content goes here...</p>
+              </div>
+              <div class="research-item">
+                  <h3>Article Title 2</h3>
+                  <p>Summary of the article content goes here...</p>
+              </div>
+              <!-- Add more articles as needed -->
+          </div>
+      </section>
+
+      <footer>
+          <p>&copy; ResearchNile © 2024 NileDevHub. All rights reserved.</p>
+      </footer>
+      <script src="{{ url_for('static', filename='Javascript/research.js') }}"></script>
+
+
+  </body>
+</html>

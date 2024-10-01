@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.latest-research {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.research-item {
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+header{
+--num-stars: 100;
+position: relative;
+
+/* Number of stars you want */
+
+}
+header .star {
+position: absolute;
+width: 2px; /* Width of the star */
+height: 2px; /* Height of the star */
+background-color: black; /* Color of the star */
+border-radius: 50%; /* To make the shape circular */
+}
+/* Number of stars you want */
+
