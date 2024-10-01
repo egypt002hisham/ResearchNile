@@ -55,19 +55,47 @@ a {
 
 
 
-
-
 .hero {
-  background-color: #000;
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
+  background: linear-gradient(to bottom, white, black); /* تدرج لوني من الأبيض إلى الأسود */
+  position: relative;
+  height: 100vh; /* اجعل الارتفاع 100% من ارتفاع الشاشة */
+  width: 100%; /* اجعل العرض 100% من العرض */
+  overflow: hidden; /* لمنع تجاوز المحتوى */
+  z-index: 0;
+
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+svg {
+  position: absolute; /* لجعل SVG خلف المحتوى */
+  top: 0;
+  left: 0;
+  width: 100%; /* تغطية العرض الكامل */
+  height: 100%; /* تغطية الارتفاع الكامل */
+  z-index: -1; /* ليكون خلف المحتوى */
 }
+
+.hero-content{
+  background-color:white;
+
+}
+
+.cotent {
+  position: absolute; /* لجعل المحتوى فوق الخلفية */
+  top: 30%; /* محاذاة عموديًا إلى المنتصف */
+  left: 50%; /* محاذاة أفقيًا إلى المنتصف */
+  transform: translate(-50%, -50%); /* نقل المحتوى إلى المنتصف */
+  color: #000;
+  text-align: center; /* محاذاة النص إلى المنتصف */
+  z-index: 1; /* ليظهر فوق الخلفية */
+}
+
+
+/* اجعل كل قسم آخر يأخذ نفس التصميم */
+section {
+  height: 100vh; /* اجعل كل قسم يأخذ ارتفاع النافذة بالكامل */
+  width: 100%; /* اجعل العرض 100% من العرض */
+} 
+
 
 .latest-research {
   padding: 50px 0;
@@ -87,18 +115,18 @@ footer {
   padding: 20px;
 }
 header{
---num-stars: 100;
-position: relative;
-
-/* Number of stars you want */
+  --num-stars: 100;
+  position: relative;
 
 }
+
 header .star {
-position: absolute;
-width: 2px; /* Width of the star */
-height: 2px; /* Height of the star */
-background-color: black; /* Color of the star */
-border-radius: 50%; /* To make the shape circular */
+  position: absolute;
+  width: 2px; /* Width of the star */
+  height: 2px; /* Height of the star */
+  background-color: black; /* Color of the star */
+  border-radius: 50%; /* To make the shape circular */
 }
 /* Number of stars you want */
+
 

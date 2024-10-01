@@ -16,7 +16,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=365)
 
 @app.route('/')
 def index():
-    return 'Hello from Flask!'
+    return render_template('Research.html')
 
 @app.route('/Research')
 def Research():
