@@ -31,21 +31,59 @@
       </section>
 
       <section class="latest-research">
-          <h2>Latest Research</h2>
-          <div class="research-list">
-              <!-- Placeholder for latest research articles -->
-              <div class="research-item">
-                  <h3>Article Title 1</h3>
-                  <p>Summary of the article content goes here...</p>
-              </div>
-              <div class="research-item">
-                  <h3>Article Title 2</h3>
-                  <p>Summary of the article content goes here...</p>
-              </div>
-              <!-- Add more articles as needed -->
-          </div>
-      </section>
-
+        <h2>Latest Research</h2>
+        <div class="research-carousel">
+            <div class="carousel-track">
+                <!-- أول عنصر بحث -->
+                <div class="research-item">
+                    <div class="card">
+                        <div class="cardfront">
+                            <img src="path_to_image1.jpg" alt="Research Image">
+                        </div>
+                        <div class="cardback">
+                            <h1>Research Title 1</h1>
+                            <p>Short description for research 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ثاني عنصر بحث -->
+                <div class="research-item">
+                    <div class="card">
+                        <div class="cardfront">
+                            <img src="path_to_image2.jpg" alt="Research Image">
+                        </div>
+                        <div class="cardback">
+                            <h1>Research Title 2</h1>
+                            <p>Short description for research 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ثالث عنصر بحث -->
+                <div class="research-item">
+                    <div class="card">
+                        <div class="cardfront">
+                            <img src="path_to_image3.jpg" alt="Research Image">
+                        </div>
+                        <div class="cardback">
+                            <h1>Research Title 3</h1>
+                            <p>Short description for research 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- النقاط السفلية -->
+            <div class="carousel-indicators">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <!-- أزرار التبديل -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+    
+        
       <footer>
           <p>&copy; ResearchNile © 2024 NileDevHub. All rights reserved.</p>
       </footer>

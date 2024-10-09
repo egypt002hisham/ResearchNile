@@ -1,4 +1,5 @@
-*{
+/* تصحيح للأخطاء */
+* {
   margin: 0;
   padding: 0;
 }
@@ -33,7 +34,6 @@ nav ul li {
 nav ul li a {
   color: black;
   text-decoration: none;
-  
 }
 
 a {
@@ -43,94 +43,186 @@ a {
   margin: 0 -.25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+
 a:hover {
   color: #fff;
-  box-shadow: inset 200px 0 0 0 black;;
+  box-shadow: inset 200px 0 0 0 black;
 }
-
-/* Presentational styles */
-a {
-  color: #54b3d6;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-decoration: none;
-}
-
-
 
 .hero {
-  background: linear-gradient(to bottom, white, black); /* تدرج لوني من الأبيض إلى الأسود */
+  background: linear-gradient(to bottom, white, black);
   position: relative;
-  height: 100vh; /* اجعل الارتفاع 100% من ارتفاع الشاشة */
-  width: 100%; /* اجعل العرض 100% من العرض */
-  overflow: hidden; /* لمنع تجاوز المحتوى */
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
   z-index: -2;
-
 }
+
 svg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;  /* عرض النافذة بالكامل */
-  height: 100vh; /* ارتفاع النافذة بالكامل */
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
 }
 
-
-.hero-content{
-  width: 100%; /* تغطية العرض الكامل */
+.hero-content {
+  width: 100%;
 }
 
 .cotent {
-  position: absolute; /* لجعل المحتوى فوق الخلفية */
-  top: 30%; /* محاذاة عموديًا إلى المنتصف */
-  left: 50%; /* محاذاة أفقيًا إلى المنتصف */
-  transform: translate(-50%, -50%); /* نقل المحتوى إلى المنتصف */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #000;
-  text-align: center; /* محاذاة النص إلى المنتصف */
-  z-index: 1; /* ليظهر فوق الخلفية */
+  text-align: center;
+  z-index: 1;
 }
 
-
-/* اجعل كل قسم آخر يأخذ نفس التصميم */
 section {
-  height: 100vh; /* اجعل كل قسم يأخذ ارتفاع النافذة بالكامل */
-  width: 100%; /* اجعل العرض 100% من العرض */
-} 
-
+  height: 100vh;
+  width: 100%;
+}
 
 .latest-research {
-  padding: 50px 0;
   text-align: center;
+  position: relative;
+  padding: 50px 0;
+}
+
+.research-carousel {
+  overflow: hidden;
+  width: 100%; /* عرض الفريم */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out; /* حركة ناعمة عند التبديل */
+  justify-content: flex-start; /* تغيير للمحاذاة */
 }
 
 .research-item {
-  border-bottom: 1px solid #ccc;
-  padding: 20px;
-  margin: 20px 0;
+  flex: 0 0 100%; /* اجعل العنصر بحجم 100% من الفريم */
+  height: 400px; /* ارتفاع ثابت للبطاقة */
+  display: block; /* اجعل البطاقة كـ block للعرض بشكل صحيح */
+  box-sizing: border-box; /* يضمن عدم التداخل */
 }
 
+.card {
+  position: relative;
+  width: 100%; /* ملء البطاقة */
+  height: 100%; /* ملء البطاقة */
+  perspective: 1000px; /* للمنظور ثلاثي الأبعاد */
+}
+
+.cardfront, .cardback {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* إخفاء الجهة الخلفية عند الدوران */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.cardfront {
+  background-color: black;
+  color: white;
+  transform: rotateY(0deg);
+}
+
+.cardback {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg); /* الجهة الخلفية تبدأ مخفية */
+}
+
+.card:hover .cardfront {
+  transform: rotateY(180deg);
+}
+
+.card:hover .cardback {
+  transform: rotateY(360deg); /* تدور الجهة الخلفية وتصبح مرئية */
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ffffff; /* النقطة النشطة */
+}
+
+/* Next & previous buttons */
+/* الأزرار الجانبية (السهمين) */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 3px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية شبه شفافة */
+  z-index: 1; /* تأكد من أن الأسهم فوق المحتوى */
+}
+
+/* موضع السهم الأيسر */
+.prev {
+  left: 0;
+}
+
+/* موضع السهم الأيمن */
+.next {
+  right: 0;
+}
+
+/* تأثير hover على الأزرار */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* خلفية أغمق عند التمرير */
+  color: white;
+}
+
+
+
 footer {
+  margin-top: 30%;
   background-color: #000;
   color: #fff;
   text-align: center;
   padding: 20px;
 }
-header{
+
+header {
   --num-stars: 100;
   position: relative;
-
 }
 
 header .star {
   position: absolute;
-  width: 2px; /* Width of the star */
-  height: 2px; /* Height of the star */
-  background-color: black; /* Color of the star */
-  border-radius: 50%; /* To make the shape circular */
+  width: 2px;
+  height: 2px;
+  background-color: black;
+  border-radius: 50%;
 }
-/* Number of stars you want */
-
 
