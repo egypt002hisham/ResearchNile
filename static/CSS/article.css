@@ -1,0 +1,117 @@
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام خط عربي */
+    background-color: #f0f4f8; /* لون الخلفية */
+    color: #333; /* لون النص */
+    direction: rtl; /* اتجاه النص لليمين */
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center; /* توسيط العنوان الرئيسي */
+    margin-bottom: 30px; /* مسافة أسفل الهيدر */
+}
+
+.main-title {
+    font-size: 32px; /* حجم الخط للعنوان الرئيسي */
+    color: #2c3e50; /* لون العنوان الرئيسي */
+}
+
+.subtitle {
+    font-size: 24px; /* حجم الخط للعناوين الفرعية */
+    color: #7f8c8d; /* لون العناوين الفرعية */
+    margin-top: 10px; /* مسافة أعلى العناوين الفرعية */
+}
+
+.container {
+    max-width: 800px; /* عرض أقصى للصفحة */
+    margin: auto; /* توسيط المحتوى */
+    padding: 30px; /* إضافة مسافة داخلية */
+    background-color: #ffffff; /* لون خلفية المحتوى */
+    border-radius: 10px; /* زوايا دائرية */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل أكثر وضوحًا */
+}
+
+.article {
+    margin-bottom: 30px; /* مسافة أسفل المقالات */
+}
+
+.article-title {
+    font-size: 26px; /* حجم الخط */
+    margin-bottom: 15px; /* مسافة أسفل العنوان */
+    color: #2c3e50; /* لون العنوان */
+}
+
+.article-image {
+    width: 100%; /* يجعل الصورة تمتد بعرض الصفحة */
+    height: auto; /* يحافظ على نسبة الأبعاد */
+    border-radius: 10px; /* زوايا دائرية للصورة */
+    margin-bottom: 20px; /* مسافة أسفل الصورة */
+}
+
+.article-description {
+    font-size: 18px; /* حجم خط الوصف */
+    margin-bottom: 15px; /* مسافة أسفل الوصف */
+    color: #7f8c8d; /* لون الوصف */
+}
+
+.article-content {
+    font-size: 16px; /* حجم خط محتوى المقال */
+    line-height: 1.8; /* ارتفاع السطر */
+    margin-top: 20px; /* مسافة أعلى المحتوى */
+    color: #34495e; /* لون النص */
+}
+
+.hashtags {
+    margin-top: 15px; /* مسافة أعلى الهاشتاجات */
+}
+
+.hashtag {
+    display: inline-block; /* عرض الهاشتاجات ككتل */
+    padding: 5px 10px; /* مسافة داخلية للهاشتاجات */
+    margin-right: 5px; /* مسافة بين الهاشتاجات */
+    background-color: #3498db; /* لون خلفية الهاشتاجات */
+    color: #ffffff; /* لون نص الهاشتاجات */
+    border-radius: 5px; /* زوايا دائرية للهاشتاجات */
+    text-decoration: none; /* إزالة خط السطر */
+    transition: background-color 0.3s ease; /* تأثير عند التمرير */
+}
+
+.hashtag:hover {
+    background-color: #2980b9; /* لون خلفية الهاشتاجات عند التمرير */
+}
+
+.back-button {
+    display: inline-block; /* عرض الزر ككتلة */
+    padding: 10px 20px; /* مسافة داخلية */
+    margin-top: 30px; /* مسافة أعلى الزر */
+    background-color: #e74c3c; /* لون خلفية الزر */
+    color: #ffffff; /* لون نص الزر */
+    border-radius: 5px; /* زوايا دائرية للزر */
+    text-decoration: none; /* إزالة خط السطر */
+    text-align: center; /* توسيط النص في الزر */
+    transition: background-color 0.3s ease; /* تأثير عند التمرير */
+}
+
+.back-button:hover {
+    background-color: #c0392b; /* لون خلفية الزر عند التمرير */
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 26px; /* حجم خط العنوان الرئيسي في الشاشات الصغيرة */
+    }
+
+    .subtitle {
+        font-size: 20px; /* حجم خط العناوين الفرعية في الشاشات الصغيرة */
+    }
+
+    .article-title {
+        font-size: 22px; /* حجم خط العنوان في الشاشات الصغيرة */
+    }
+
+    .article-description,
+    .article-content {
+        font-size: 14px; /* حجم خط الوصف والمحتوى في الشاشات الصغيرة */
+    }
+}

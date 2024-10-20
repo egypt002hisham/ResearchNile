@@ -71,3 +71,33 @@ function updateCarousel() {
         item.style.width = `calc(100% / ${visibleCards})`; // تحديث عرض العناصر بناءً على عدد البطاقات المرئية
     }
 }
+
+
+// animation.js
+
+// استخدام Intersection Observer API لتفعيل الأنيمشن عند الوصول إلى كل قسم
+const sections = document.querySelectorAll('section'); // استهداف جميع الأقسام
+
+const observerOptions = {
+    root: null, // استخدام النافذة كمراقب
+    threshold: 0.1 // تفعيل الأنيمشن عندما يكون 10% من القسم مرئي
+};
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp', 'visible'); // إضافة فئات الأنيمشن
+
+            // إعادة تعيين الفئة لجعل الأنيمشن يعمل مرة أخرى
+            entry.target.addEventListener('animationend', () => {
+                entry.target.classList.remove('visible'); // إزالة الفئة بعد الانتهاء من الأنيمشن
+                entry.target.classList.remove('animate__animated', 'animate__fadeInUp'); // إزالة فئات الأنيمشن
+            }, { once: true }); // تأكد من أن هذا الحدث سيعمل مرة واحدة فقط
+        }
+    });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => {
+    observer.observe(section); // بدء مراقبة كل قسم
+});

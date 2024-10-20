@@ -1,0 +1,171 @@
+:root {
+    --background: black;
+    --light: #03fa6e;
+    --dark-gray: #222;
+    --white: white;
+    --font-main: 'Arial', sans-serif;
+    color: var(--white);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    color: var(--white);
+    background-color: var(--background);
+}
+.start{
+    display: flex;
+    align-items: start;
+}
+
+.start h1{
+    color: #fff;
+    margin: 30px;
+  
+
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("/static/img/Logos/Knowledge.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+ 
+
+}
+
+header img.logo {
+    max-width: 150px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--light);
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+.welcome {
+    position: relative; /* لتحديد موقع العناصر داخل القسم */
+    padding: 50px 20px; /* إضافة مسافة داخلية */
+    text-align: center; /* محاذاة النص في المنتصف */
+    color: white; /* لون النص */
+    background-color: white;
+   
+}
+
+.welcome svg {
+    position: absolute; /* لجعل SVG في الخلفية */
+    top: 0; /* محاذاة إلى أعلى */
+    left: 0; /* محاذاة إلى اليسار */
+    width: 100%; /* عرض 100% */
+    height: auto; /* ارتفاع تلقائي */
+    z-index: 0; /* وضعها خلف النص */
+}
+
+.welcome h2 {
+    position: relative;
+    font-size: 28px; /* حجم الخط */
+    margin: 5px 0; /* مسافة علوية وسفلية */
+    text-shadow: 0 0 10px var(--light); /* تأثير التوهج للنص */
+    z-index: 1;
+}
+
+.welcome p {
+    position: relative;
+    font-size: 18px; /* حجم خط الفقرة */
+    margin: 15px 0; /* مسافة علوية وسفلية */
+    z-index: 1;
+}
+
+.welcome .cta {
+    position: relative;
+    padding: 10px 20px;
+    background-color: var(--light);
+    color: var(--dark-gray);
+    text-decoration: none;
+    border-radius: 5px;
+    top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1;
+}
+
+.welcome .cta:hover {
+    background-color: #fff;
+    color: var(--dark-gray);
+}
+
+main .featured {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+main .featured h2 {
+    color: var(--light);
+    margin-bottom: 40px;
+}
+
+main .research-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+main .research-list article {
+    background-color: var(--dark-gray);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+main .research-list article h3 {
+    color: var(--light);
+    margin-bottom: 15px;
+}
+
+main .research-list article p {
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+main .research-list article a {
+    text-decoration: none;
+    color: var(--light);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+main .research-list article a:hover {
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-gray);
+    color: var(--light);
+}

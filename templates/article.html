@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقالات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/article.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet"> <!-- خط عربي -->
+</head>
+<body>
+    <header>
+        <h1 class="main-title">مرحبا بكم في مكتبة المقالات</h1>
+        <h2 class="subtitle">مقالات عملية وفلسفية</h2>
+    </header>
+
+    <div class="container">
+        <div class="article">
+            <h3 class="article-title">{{ article.title }}</h3>
+            <p class="article-description">{{ article.description }}</p>
+            <div class="article-content">{{ article_html|safe }}</div>
+            <div class="hashtags">
+                {% for tag in article.hashtag %}      
+                    <span class="hashtag">{{tag}}</span>
+                {% endfor %}
+
+            </div>
+            <a href="/" class="back-button">العودة إلى القائمة الرئيسية</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='Javascript/article.js') }}"></script>
+</body>
+</html>

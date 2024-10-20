@@ -8,7 +8,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #121112;
   color: #fff;
 }
 
@@ -137,9 +137,50 @@ section {
 }
 
 .cardback {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   color: black;
   transform: rotateY(180deg); /* الجهة الخلفية تبدأ مخفية */
+  padding: 20px; /* إضافة حشوة حول المحتوى */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+  margin: 20px auto; /* توسيط العنصر في الصفحة */
+
+
+}
+
+.cardback h1 {
+  color: #333; /* لون النص للعنوان */
+  font-size: 24px; /* حجم خط العنوان */
+  margin-bottom: 15px; /* إضافة مساحة أسفل العنوان */
+  text-align: center; /* توسيط النص في العنوان */
+}
+
+.cardback p {
+  color: #555; /* لون النص (رمادي داكن) */
+  font-size: 18px; /* حجم خط النص */
+  line-height: 1.6; /* تباعد الأسطر لجعل القراءة أسهل */
+  margin: 10px 0; /* هوامش من الأعلى والأسفل */
+  text-align: justify; /* محاذاة النص ليتوزع بشكل متساوي */
+  padding: 10px; /* إضافة حشوة داخل الفقرة */
+  background-color: #f9f9f9; /* خلفية خفيفة لتفريق الفقرة */
+  border-right: 5px solid #007BFF; /* خط جانبي ملون لإبراز الفقرة */
+  max-width: 500px; /* تعيين عرض أقصى للفقرة */
+  direction: rtl; /* اتجاه النص لليمين */
+
+}
+
+.cardback svg{
+  width: 100%; /* تجعل الصورة تأخذ عرض الحاوية بالكامل */
+  height: auto; /* يحافظ على نسبة الطول إلى العرض */
+
+}
+
+.cardfront img {
+  width: 100%; /* تجعل الصورة تأخذ عرض الحاوية بالكامل */
+  height: auto; /* يحافظ على نسبة الطول إلى العرض */
+  border-radius: 10px; /* زوايا دائرية للصورة */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
 }
 
 .card:hover .cardfront {

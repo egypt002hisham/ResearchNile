@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NileDevHub - Knowledge and Research Platform</title>
+    <meta name="description" content="NileDevHub: A platform for sharing research and knowledge. Explore new research and contribute your articles.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+<body>
+    <header>
+        <div class = "start">
+            <h1>NileDevHub: Knowledge & Research Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/Research">Research</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="2" d="M0,224L40,218.7C80,213,160,203,240,218.7C320,235,400,277,480,282.7C560,288,640,256,720,224C800,192,880,160,960,149.3C1040,139,1120,149,1200,176C1280,203,1360,245,1400,266.7L1440,288L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+            <h2>Welcome to NileDevHub</h2>
+            <p>
+                A platform for sharing knowledge, where you can explore the latest research and scientific articles. Join us and contribute your articles and research to enhance public knowledge.
+            </p>
+            <a class="cta" href="/Research">Get Started Now</a>
+        </section>
+        
+        <section class="featured">
+            <h2>Featured Research</h2>
+            <div class="research-list">
+                <article>
+                    <h3>Research on Artificial Intelligence</h3>
+                    <p>Exploring the latest developments in the field of artificial intelligence and its practical applications.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article>
+                    <h3>Climate Change and Its Impact</h3>
+                    <p>How climate change affects the environment? A detailed study with real-world examples.</p>
+                    <a href="#">Read More</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NileDevHub. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='Javascript/home.js') }}" async defer></script>
+</body>
+</html>
